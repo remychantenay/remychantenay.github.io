@@ -1,0 +1,94 @@
+// Breakpoints
+
+$tiny-bp: 375px;
+$small-bp: 768px;
+$medium-bp: 900px;
+$large-bp: 1280px;
+$xlarge-bp: 1440px;
+
+// Colours
+
+$grey: rgb(242, 243, 242);
+$grey-variant: #D1D3D2;
+
+$black: #192622;
+$white: #fff;
+
+$blue: #177BB3;
+
+$green: #86D6BC;
+$green-variant: #17B37F;
+
+$primary: #177BB3;
+$primary-variant: rgb(20, 103, 151);
+$accent: #FCDAB8;
+$accent-variant: #FBC590;
+
+$background: $white;
+$surface: #F8F8F8;
+
+$success: #17B37F;
+$error: #FF4848;
+
+$highlighter-coral: #FED7D3;
+$highlighter-yellow: #FDE4CC;
+$highlighter-green: #A8E2CF;
+$highlighter-lilac: #D9C2EC;
+$highlighter-coral-extra-light: rgba(254, 215, 211, 0.362);
+
+$alert-info: rgba(252, 218, 184, 0.603);
+
+
+$carthrottle: #FF9C42;
+$bundll: #08C38B;
+$wtm-red: #BF2A2A;
+$gotaxfree: #400853;
+$pdlp: #11A0D0;
+$supercard: #102D3D;
+$wilo: #FE6F61;
+
+// Spacing
+$spacing-0: 0;
+$spacing-1: 4px;
+$spacing-2: 8px;
+$spacing-3: 12px;
+$spacing-4: 16px;
+$spacing-5: 24px;
+$spacing-6: 32px;
+$spacing-7: 48px;
+$spacing-8: 64px;
+$spacing-9: 72px;
+
+// Styles
+
+$border-radius: 12px;
+$border-radius-4: 4px;
+$border-radius-8: 8px;
+$border-radius-20: 20px;
+$border-radius-50: 50px;
+
+$box-shadow: 0 $spacing-2 $spacing-4 rgba(0, 0, 0, 0.15);
+$box-shadow-hover: 0 $spacing-4 $spacing-6 rgba(0, 0, 0, 0.25);
+
+// Animation
+
+$transition: 0.3s;
+
+// Typography
+
+$heading-font-family: 'Inter', Georgia, serif;
+$body-font-family: 'Inter', -system-ui, system-ui, sans-serif;
+
+$font-size-0: 3em;
+$font-size-1: 2.4em;
+$font-size-2: 1.8em;
+$font-size-3: 1.4em;
+$font-size-4: 1.2em;
+$font-size-5: 1em;
+$font-size-6: 0.875em;
+$font-size-7: 0.5em;
+
+$line-height: calc(1em * 1.5);
+
+$bold: 600;
+$regular: 400;

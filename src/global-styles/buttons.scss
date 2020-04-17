@@ -1,0 +1,239 @@
+.btn {
+  background: $primary;
+  border: 1px solid $primary;
+  border-radius: $border-radius-50;
+  box-shadow: $box-shadow;
+  min-width: 150px;
+  color: $white;
+  display: inline-block;
+  font-weight: $regular;
+  max-height: $spacing-8;
+  max-width: 100%;
+  outline: none;
+  padding: $spacing-3 $spacing-4;
+  text-align: center;
+  transition: $transition;
+  width: auto;
+
+  &:hover {
+    background: lighten($primary, 4%);
+    border-color: $primary;
+    box-shadow: $box-shadow-hover;
+    color: $white;
+    cursor: pointer;
+    transition: $transition;
+  }
+
+  &.w-100 {
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+  }
+
+  &:active,
+  &:focus {
+    background: darken($primary, 4%);
+    box-shadow: none;
+    color: $white;
+    transition: $transition;
+  }
+}
+
+.btn-fill {
+  &.btn-grey {
+    background: $grey-variant;
+    border-color: $grey-variant;
+
+    &:hover {
+      background: lighten($grey-variant, 4%);
+    }
+
+    &:active,
+    &:focus {
+      background: darken($grey-variant, 4%);
+    }
+  }
+
+  &.btn-green {
+    background: $green;
+    border-color: $green;
+
+    &:hover {
+      background: lighten($green, 4%);
+    }
+
+    &:active,
+    &:focus {
+      background: darken($green, 4%);
+    }
+  }
+
+  &.btn-white {
+    background: $white;
+    border-color: $white;
+  }
+}
+
+.btn-outline {
+  background: none;
+  border: 1px solid $primary;
+  box-shadow: none;
+  color: $primary;
+
+  &:hover {
+    background: $primary;
+    box-shadow: none;
+    color: $white;
+  }
+
+  &:active,
+  &:focus {
+    background: darken($primary, 4%);
+    color: $white;
+  }
+
+  &.btn-grey {
+    border: 1px solid $grey-variant;
+    color: $grey-variant;
+
+    &:hover {
+      background: $grey-variant;
+      box-shadow: none;
+      color: $white;
+    }
+
+    &:active,
+    &:focus {
+      background: darken($grey-variant, 4%);
+      color: $white;
+    }
+  }
+
+  &.btn-black {
+    border: 1px solid $black;
+    color: $black;
+
+    &:hover {
+      background: $black;
+      box-shadow: none;
+      color: $white;
+    }
+
+    &:active,
+    &:focus {
+      background: darken($black, 4%);
+      color: $white;
+    }
+  }
+
+  &.btn-white {
+    border: 1px solid $white;
+    color: $white;
+
+    &:hover {
+      background: $white;
+      box-shadow: none;
+      color: $black;
+    }
+
+    &:active,
+    &:focus {
+      background: darken($white, 4%);
+      color: $black;
+    }
+  }
+
+  &.btn-green {
+    border: 1px solid $green;
+    color: $primary;
+
+    &:hover {
+      background: $green;
+      box-shadow: none;
+      color: $white;
+    }
+
+    &:active,
+    &:focus {
+      background: darken($green, 4%);
+      color: $white;
+    }
+  }
+}
+
+.btn-flat {
+  box-shadow: none;
+
+  &:hover {
+    box-shadow: none;
+  }
+
+
+  &:active,
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+.btn-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn-small {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  width: fit-content;
+  padding-left: $spacing-3;
+  padding-right: $spacing-3;
+  padding-top: $spacing-1;
+  padding-bottom: $spacing-1;
+  box-sizing: border-box;
+}
+
+.btn-small-accent-variant {
+  border: none;
+  background: $accent-variant;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  width: fit-content;
+  padding-left: $spacing-3;
+  padding-right: $spacing-3;
+  padding-top: $spacing-1;
+  padding-bottom: $spacing-1;
+  box-sizing: border-box;
+
+  &:hover {
+    background: lighten($accent-variant, 4%);
+    box-shadow: $box-shadow-hover;
+    color: $white;
+    cursor: pointer;
+    transition: $transition;
+  }
+
+  &.w-100 {
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+  }
+
+  &:active,
+  &:focus {
+    background: darken($accent-variant, 4%);
+    box-shadow: none;
+    color: $white;
+    transition: $transition;
+  }
+}

@@ -1,0 +1,147 @@
+.block {
+  display: block;
+}
+
+.inline {
+  display: inline;
+}
+
+.clear {
+  clear: both;
+}
+
+// Width
+
+.w-100 {
+  width: 100%;
+}
+
+.w-75 {
+  width: 75%;
+}
+
+.w-66 {
+  width: 66.666%;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+.w-33 {
+  width: 33.333%;
+}
+
+.w-25 {
+  width: 25%;
+}
+
+.w-auto {
+  width: auto;
+}
+
+// Float
+
+.f-left {
+  float: left;
+}
+
+.f-right {
+  float: right;
+}
+
+.flex-h,
+.flex-v {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-direction: normal;
+}
+
+.flex-v {
+  -webkit-box-orient: vertical;
+  flex-direction: column;
+
+  &.center {
+    align-self: center;
+  }
+}
+
+.flex-h {
+  -webkit-box-orient: horizontal;
+  flex-direction: row;
+
+  .bottom {
+    align-self: flex-end;
+  }
+}
+
+// Hide below...
+
+.hide-xs {
+  @media only screen and (max-width: $tiny-bp - 1px) {
+    display: none;
+  }
+}
+
+.hide-sm {
+  @media only screen and (max-width: $small-bp - 1px) {
+    display: none;
+  }
+}
+
+.hide-md {
+  @media only screen and (max-width: $medium-bp - 1px) {
+    display: none;
+  }
+}
+
+.hide-lg {
+  @media only screen and (max-width: $large-bp - 1px) {
+    display: none;
+  }
+}
+
+.hide-xl {
+  @media only screen and (max-width: $xlarge-bp - 1px) {
+    display: none;
+  }
+}
+
+// Mobile only
+
+.sm-only {
+  display: inherit;
+  @media only screen and (min-width: $small-bp) {
+    display: none;
+  }
+}
+
+// Only show above
+
+.show-xs {
+  display: none;
+  @media only screen and (min-width: $tiny-bp) {
+    display: block;
+  }
+}
+
+.show-sm {
+  display: none;
+  @media only screen and (min-width: $small-bp) {
+    display: block;
+  }
+}
+
+.show-md {
+  display: none;
+  @media only screen and (min-width: $medium-bp) {
+    display: block;
+  }
+}
+
+.show-lg {
+  display: none;
+  @media only screen and (min-width: $large-bp) {
+    display: block;
+  }
+}

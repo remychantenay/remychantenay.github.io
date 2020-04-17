@@ -1,0 +1,204 @@
+input,
+textarea {
+  width: 300px;
+  height: 45px;
+  top: calc(50% - 24px/2);
+
+  padding-left: $spacing-4;
+  padding-right: $spacing-4;
+
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+
+  color: $grey-variant;
+  border: 1px solid $grey-variant;
+  box-sizing: border-box;
+  border-radius: 3px;
+
+  &:focus {
+    border: 2px solid $accent-variant;
+    outline-width: 0;
+  }
+
+  &:hover {
+    border: 2px solid $accent-variant;
+  }
+
+  &[type="search"] {
+    height: 50px;
+  }
+}
+
+label {
+  display: block;
+  font-weight: $bold;
+  margin: $spacing-2 0;
+
+  span {
+    display: block;
+    font-weight: $bold;
+    margin: 0 0 $spacing-2;
+  }
+
+  input {
+    display: block;
+  }
+}
+
+.select-css {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: $white;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%236D808C%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+  background-position: right 0.7em top 50%;
+  background-repeat: no-repeat, repeat;
+  background-size: 0.65em auto;
+  border: 1px solid $grey-variant;
+  border-radius: $border-radius;
+  box-sizing: border-box;
+  color: $black;
+  display: block;
+  font-size: 1em;
+  line-height: $line-height;
+  margin: 0;
+  max-width: 100%;
+  padding: $spacing-3 $spacing-6 $spacing-3 $spacing-3;
+  transition: border $transition;
+  width: 100%;
+
+  &::-ms-expand {
+    display: none;
+  }
+
+  &:hover {
+    border-color: $grey-variant;
+    transition: border $transition;
+  }
+
+  &:focus {
+    border-color: $blue;
+    color: $black;
+    outline: none;
+    transition: border $transition;
+  }
+
+  &:disabled,
+  &[aria-disabled="true"] {
+    background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22graytext%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+    color: graytext;
+  }
+
+  &:disabled:hover,
+  &[aria-disabled="true"] {
+    border-color: $grey-variant;
+  }
+}
+
+/* Support for rtl text, explicit support for Arabic and Hebrew */
+*[dir="rtl"] .select-css,
+:root:lang(ar) .select-css,
+:root:lang(iw) .select-css {
+  background-position: left 0.7em top 50%, 0 0;
+  padding: 0.6em 0.8em 0.5em 1.4em;
+}
+
+.md-checkbox {
+  margin: $spacing-4 0;
+  position: relative;
+  text-align: left;
+
+  &:last-of-type {
+    margin-bottom: $spacing-1;
+  }
+
+  &.md-checkbox-inline {
+    display: inline-block;
+  }
+
+  label {
+    clear: both;
+    cursor: pointer;
+    display: inline;
+    font-weight: normal;
+    line-height: $spacing-5;
+    padding-left: 1px;
+    text-align: left;
+    vertical-align: top;
+
+    &:not(:empty) {
+      padding-left: $spacing-3;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      left: 0;
+      position: absolute;
+      top: 0;
+    }
+
+    &::before {
+      // box
+      background: $white;
+      border: 1px solid $grey-variant;
+      border-radius: $border-radius;
+      cursor: pointer;
+      height: $spacing-5;
+      transition: background 0.3s;
+      width: $spacing-5;
+    }
+
+    &:after {
+      // checkmark
+    }
+
+    &:hover {
+      &::before {
+        border-color: $grey-variant;
+        transition: border-color $transition;
+      }
+    }
+  }
+
+  input[type="checkbox"] {
+    display: block;
+    float: left;
+    font-size: inherit;
+    margin: 0;
+    min-height: 0;
+    outline: 0;
+    visibility: hidden;
+    width: $spacing-5;
+
+    &:checked {
+      + label::before {
+        background: $blue;
+        border: 1px solid $blue;
+      }
+
+      + label::after {
+        border: 2px solid $white;
+        border-right-style: none;
+        border-top-style: none;
+        height: $spacing-1;
+        transform: translate(6px, $spacing-2) rotate(-45deg);
+        width: $spacing-3;
+      }
+    }
+
+    &:disabled {
+      + label::before {
+        border-color: $grey-variant;
+      }
+
+      &:checked {
+        + label::before {
+          background: $grey-variant;
+        }
+      }
+    }
+  }
+}

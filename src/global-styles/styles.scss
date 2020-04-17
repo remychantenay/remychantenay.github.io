@@ -1,0 +1,89 @@
+// Styles
+
+.rounded {
+  border-radius: $border-radius;
+}
+
+.rounded-100 {
+  border-radius: 100%;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+img {
+  &.center {
+    -o-object-position: center center;
+    align-self: center;
+    object-position: center center;
+  }
+
+  &.bottom {
+    -o-object-position: center bottom;
+    align-self: center;
+    object-position: center bottom;
+  }
+
+  &.left {
+    &.top {
+      -o-object-position: left top;
+      align-self: flex-start;
+      object-position: left top;
+    }
+
+    &.center {
+      -o-object-position: left center;
+      align-self: flex-start;
+      object-position: left center;
+    }
+
+    &.bottom {
+      -o-object-position: left bottom;
+      align-self: flex-start;
+      object-position: left bottom;
+    }
+  }
+
+  &.right {
+    &.top {
+      -o-object-position: right top;
+      align-self: flex-end;
+      object-position: right top;
+    }
+
+    &.center {
+      -o-object-position: right center;
+      align-self: flex-end;
+      object-position: right center;
+    }
+
+    &.bottom {
+      -o-object-position: right bottom;
+      align-self: flex-end;
+      object-position: right bottom;
+    }
+  }
+}
+
+.hr {
+  color: $grey-variant;
+
+  &:only-child {
+    color: $grey-variant;
+  }
+
+  &.hr-simple {
+    background-color: $grey-variant;
+    height: 1px;
+    margin: 0;
+  }
+
+  .wave {
+    overflow: hidden;
+
+    svg {
+      width: 100%;
+    }
+  }
+}

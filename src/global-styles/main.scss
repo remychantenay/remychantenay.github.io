@@ -1,0 +1,158 @@
+html {
+  // -webkit-overflow-scrolling: touch;
+  // overflow-x: hidden;
+  // scroll-behavior: smooth;
+}
+
+body {
+  color: $black;
+  margin: 0;
+  padding: 0;
+}
+
+:first-child {
+  margin-top: unset;
+}
+
+:last-child {
+  margin-bottom: unset;
+}
+
+section,
+footer {
+  padding: $spacing-7 0;
+
+  @media only screen and (min-width: $small-bp) {
+    padding: $spacing-8 0;
+  }
+}
+
+.container {
+  clear: both;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 $spacing-5;
+  position: relative;
+
+  &.contain-small {
+    max-width: $small-bp;
+  }
+}
+
+.truncate {
+  input,
+  label {
+    display: none;
+  }
+
+  @media only screen and (max-width: $small-bp - 1) {
+    input {
+      display: inherit;
+      opacity: 0;
+      pointer-events: none;
+      position: absolute;
+    }
+
+    p {
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+      display: -webkit-box;
+      overflow: hidden;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+
+    input:focus ~ label {
+      outline: -webkit-focus-ring-color auto 5px;
+    }
+
+    input:checked + p {
+      -webkit-line-clamp: unset;
+    }
+
+    input:checked ~ label {
+      display: none;
+    }
+
+    label {
+      color: $primary;
+      cursor: pointer;
+      display: inherit;
+      margin-top: 0;
+      padding: $spacing-3 0;
+    }
+  }
+}
+
+.pre-wrap {
+  white-space: pre-wrap;
+}
+
+.page-head {
+  color: $white;
+
+  .hr {
+    color: $white;
+    margin-bottom: $spacing-7;
+
+    path {
+      stroke: $white;
+    }
+  }
+}
+
+.no-select {
+  -webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none;      /* IE 10+ */
+  user-select: none;          /* Likely future */     
+}
+
+.shine {
+  background: $grey;
+  background-image: linear-gradient(to right, $grey 0%, #edeef1 20%, $grey 40%, $grey 100%);
+  background-repeat: no-repeat;
+  
+  -webkit-animation-duration: 1.5s;
+  -webkit-animation-fill-mode: forwards; 
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-name: placeholderShimmer;
+  -webkit-animation-timing-function: linear;
+}
+
+@-webkit-keyframes placeholderShimmer {
+  0% {
+      background-position: -500 0;
+  }
+      
+  100% {
+      background-position: 500px 0; 
+  }
+}
+
+.pre-wrap {
+  white-space:pre-wrap;
+}
+
+.clamp-2 {
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
+}
+
+.clamp-3 {
+  -webkit-line-clamp: 3;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
+}
+
+.clamp-6 {
+  -webkit-line-clamp: 6;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
+}
